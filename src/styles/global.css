@@ -51,3 +51,323 @@
     }
   }
 }
+/* ==============================
+   HERO LAYOUT
+================================ */
+
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ==============================
+   HERO TEXT
+================================ */
+
+.hero-name {
+  font-family: serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+}
+
+/* ==============================
+   ROLE ANIMATION (VERY PROMINENT)
+================================ */
+
+.role-container {
+  position: relative;
+  height: 4.5rem;
+  font-family: serif;
+  font-weight: 900;
+  font-size: 3.25rem;
+  color: #5755ff;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .role-container {
+    font-size: 4rem;
+    height: 5.2rem;
+  }
+}
+
+.role-text {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpRole 9s infinite;
+  text-shadow: 0 0 18px rgba(87, 85, 255, 0.45);
+}
+
+/* timing */
+.role-text:nth-child(1) { animation-delay: 0s; }
+.role-text:nth-child(2) { animation-delay: 3s; }
+.role-text:nth-child(3) { animation-delay: 6s; }
+
+@keyframes slideUpRole {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  32% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  45% {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ==============================
+   SUMMARY + CTA
+================================ */
+
+.hero-summary {
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #9ca3af;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* ==============================
+   HERO IMAGE (RIGHT SIDE)
+================================ */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hero-name {
+  font-family: serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap; /* Forces one line */
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 520px;   /* Bigger image */
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-name {
+    white-space: normal;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+/* ==============================
+   SKILLS SECTION
+================================ */
+
+.section-title {
+  font-family: serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(87, 85, 255, 0.35);
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5755ff;
+  margin-bottom: 1rem;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.skill-card li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #5755ff;
+}
+
+
+/* ==============================
+   BLOGS SECTION – GLASS STYLE
+================================ */
+
+.blogs-section {
+  padding: 7rem 0;
+}
+
+.blogs-title {
+  font-family: serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-card {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(87, 85, 255, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(87, 85, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.blog-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.blog-card p {
+  margin-top: 1rem;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.blog-read {
+  margin-top: 1.5rem;
+  color: #6c7cff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}

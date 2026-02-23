@@ -1,27 +1,34 @@
----
-import type { HeroProps } from "@types";
-type Props = HeroProps;
+<section class="hero-section py-28 md:py-36" id="hero">
+  <div class="hero-grid">
 
-const { name, specialty, summary, email } = Astro.props;
----
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1 class="hero-name">
+        Abhinav Singh
+      </h1>
 
-<section class="py-24 md:py-32" id="#hero">
-  <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
-  >
-    {name}
-  </h1>
-  <p
-    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
-  >
-    {specialty}
-  </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
-    {summary}
-  </p>
+      <div class="role-container">
+        <span class="role-text">AI Engineer</span>
+        <span class="role-text">MLOps Engineer</span>
+        <span class="role-text">DevOps & ML Systems</span>
+      </div>
 
-  <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
-  >
+      <p class="hero-summary">
+        I build scalable machine learning systems and production-ready software.
+        My focus lies at the intersection of ML, backend engineering,
+        DevOps, and cloud infrastructure — transforming models into reliable,
+        real-world systems.
+      </p>
+
+      <a href="mailto:abhinav@example.com" class="hero-cta">
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="hero-image">
+      <img src="/profile-big.jpg" alt="Abhinav Singh" />
+    </div>
+
+  </div>
 </section>
